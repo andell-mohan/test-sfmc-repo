@@ -1,19 +1,13 @@
-<script runat="server">
-    // init core library266341
-    Platform.Load("Core", "1.1.1")
-
-    // security_headers
-    Platform.Function.ContentBlockByID(253230);
-</script>
-
-<script runat="server">
-
-    try {
-        var dataRaw = Platform.Request.GetPostData('utf-8')
-        var data = Platform.Function.ParseJSON(dataRaw)
-        Write(Stringify("test"))
-        Write(Stringify(data))
-    } catch (error) {
-        Write(Stringify(error))
-    }
-</script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test page</title>
+</head>
+<body>
+    <h1>Test headline has changed from put</h1>
+    <p>this is a new paragraph</p>
+    <p>for the new pr3</p>
+    <p>for the new pr4</p>
+</body>
+</html>
