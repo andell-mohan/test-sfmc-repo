@@ -1,0 +1,19 @@
+<script runat="server">
+    // init core library
+    Platform.Load("Core", "1.1.1")
+
+    // security_headers
+    Platform.Function.ContentBlockByID(253230);
+</script>
+
+<script runat="server">
+
+    try {
+        var dataRaw = Platform.Request.GetPostData('utf-8')
+        var data = Platform.Function.ParseJSON(dataRaw)
+        Write(Stringify("test"))
+        Write(Stringify(data))
+    } catch (error) {
+        Write(Stringify(error))
+    }
+</script>
